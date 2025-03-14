@@ -1,0 +1,9 @@
+rpc_endpoints:
+  - name: "Ankr"
+    url: "https://rpc.ankr.com/eth"
+  # - name: "LlamaRPC"
+  #  url: "https://eth.llamarpc.com"
+  # - name: "Tenderly"
+  #  url: "https://mainnet.gateway.tenderly.co"
+  # - name: "Blast"
+  #  url: "https://eth.rpc.blxrbdn.com"
