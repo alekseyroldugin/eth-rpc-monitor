@@ -23,7 +23,7 @@ git clone https://github.com/alekseyroldugin/eth-rpc-monitor
 cd ethereum-rpc-monitor
 ```
 
-### **2️⃣ Configure Endpoints (**``**)**
+### **2️⃣ Configure Endpoints**
 
 Edit `config.yaml` to specify **Ethereum RPC endpoints**:
 
@@ -43,7 +43,7 @@ rpc_endpoints:
 
 ---
 
-### **3️⃣ Run Locally the service locally**
+### **3️⃣ Run the service Locally**
 
 Ensure you have **Go** installed (version 1.18+):
 
@@ -55,9 +55,7 @@ go run main.go
 
 ---
 
-## **4️⃣ Run Prometheus and Grafana with Docker Compose**
-
-### **1️⃣ Build & Start Services**
+### **4️⃣ Run Prometheus and Grafana with Docker Compose**
 
 ```sh
 docker-compose up -d --build
@@ -68,11 +66,7 @@ This starts:
 - 📡 **Prometheus** (Port `9091`)
 - 📊 **Grafana** (Port `3000`)
 
-### **2️⃣ Check Logs**
-
-```sh
-docker-compose logs -f eth-rpc-monitor
-```
+---
 
 ### **5️⃣ Open Grafana Dashboard**
 
