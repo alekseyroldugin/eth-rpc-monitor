@@ -19,7 +19,7 @@ This project monitors multiple Ethereum RPC endpoints, measuring **latency** and
 ### **1️⃣ Clone the Repository**
 
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/alekseyroldugin/eth-rpc-monitor
 cd ethereum-rpc-monitor
 ```
 
@@ -39,11 +39,11 @@ rpc_endpoints:
     url: "https://eth.rpc.blxrbdn.com"
 ```
 
-💡 **To disable an endpoint, simply remove it from the list.**
+💡 **Initially only 1st endpoint is active and 3 other are commented**
 
 ---
 
-### **3️⃣ Run Locally (Without Docker)**
+### **3️⃣ Run Locally the service locally**
 
 Ensure you have **Go** installed (version 1.18+):
 
@@ -55,7 +55,7 @@ go run main.go
 
 ---
 
-## **🐳 Run with Docker Compose**
+## **4️⃣ Run Prometheus and Grafana with Docker Compose**
 
 ### **1️⃣ Build & Start Services**
 
@@ -65,7 +65,6 @@ docker-compose up -d --build
 
 This starts:
 
-- 🚀 **Go RPC Monitor** (Port `9090`)
 - 📡 **Prometheus** (Port `9091`)
 - 📊 **Grafana** (Port `3000`)
 
@@ -75,7 +74,7 @@ This starts:
 docker-compose logs -f eth-rpc-monitor
 ```
 
-### **3️⃣ Open Grafana Dashboard**
+### **5️⃣ Open Grafana Dashboard**
 
 👉 **Grafana UI:** [http://localhost:3000](http://localhost:3000)\
 ✍️ **Default Login:**
@@ -91,7 +90,7 @@ docker-compose logs -f eth-rpc-monitor
 
 1. Open Grafana → `Configuration` → `Data Sources`
 2. Click `Add data source` → Select **Prometheus**
-3. Set **URL**: `http://prometheus:9090`
+3. Set **URL**: `http://host.docker.internal:9091/`
 4. Click `Save & Test`
 
 ### **2️⃣ Import Dashboard**
